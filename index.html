@@ -1,83 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
-    <meta name="format-detection" content="telephone=no"> <!--防止将数字识别为电话号码高亮-->
+    <meta name="format-detection" content="telephone=no">
+    <!--防止将数字识别为电话号码高亮-->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/main.css">
-    <title>Title</title>
+    <title>HTML5在线阅读器</title>
 </head>
+
 <body>
-<div id="root" class="container">
-    <div class="article-action">
-        <div class="article-action-mid" id="action_mid"></div>
-    </div>
-    <div id="top_nav" class="top-nav" style="display:none;">
-        <div class="icon-back"></div>
-        <div class="nav-title">返回书架</div>
-    </div>
-    <div id="fiction_title"></div>
-    <article id="fiction_container" class="read-content">
-<!--
+    <div id="root" class="container">
+        <div class="article-action">
+            <div class="article-action-mid" id="action_mid"></div>
+        </div>
+        <div id="top_nav" class="top-nav" style="display:none;">
+            <div class="icon-back"></div>
+            <div class="nav-title">返回书架</div>
+        </div>
+        <div id="fiction_title"></div>
+        <article id="fiction_container" class="read-content">
+            <!--
         <h4>一个测试章节</h4>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, molestias, voluptas? Ad alias aut corporis dolor, eum expedita facilis fuga libero non numquam perferendis perspiciatis tempora totam! Accusamus ad asperiores aut autem consectetur consequatur, consequuntur culpa cupiditate deserunt dignissimos distinctio dolore ea et eveniet exercitationem facere id illo itaque magni modi odio officiis pariatur perspiciatis possimus praesentium quae qui tenetur vel velit voluptatibus! Accusantium aliquam aliquid corporis debitis deserunt, earum eius incidunt labore magnam nemo non officiis, quas quis reiciendis sapiente sint suscipit tempora, vel veritatis voluptate. Amet aspernatur ducimus eius, excepturi explicabo nesciunt non officiis omnis quos totam ullam?</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, molestias, voluptas? Ad alias aut corporis dolor, eum expedita facilis fuga libero non numquam perferendis perspiciatis tempora totam! Accusamus ad asperiores aut autem consectetur consequatur, consequuntur culpa cupiditate deserunt dignissimos distinctio dolore ea et eveniet exercitationem facere id illo itaque magni modi odio officiis pariatur perspiciatis possimus praesentium quae qui tenetur vel velit voluptatibus! Accusantium aliquam aliquid corporis debitis deserunt, earum eius incidunt labore magnam nemo non officiis, quas quis reiciendis sapiente sint suscipit tempora, vel veritatis voluptate. Amet aspernatur ducimus eius, excepturi explicabo nesciunt non officiis omnis quos totam ullam?</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, molestias, voluptas? Ad alias aut corporis dolor, eum expedita facilis fuga libero non numquam perferendis perspiciatis tempora totam! Accusamus ad asperiores aut autem consectetur consequatur, consequuntur culpa cupiditate deserunt dignissimos distinctio dolore ea et eveniet exercitationem facere id illo itaque magni modi odio officiis pariatur perspiciatis possimus praesentium quae qui tenetur vel velit voluptatibus! Accusantium aliquam aliquid corporis debitis deserunt, earum eius incidunt labore magnam nemo non officiis, quas quis reiciendis sapiente sint suscipit tempora, vel veritatis voluptate. Amet aspernatur ducimus eius, excepturi explicabo nesciunt non officiis omnis quos totam ullam?</p>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, molestias, voluptas? Ad alias aut corporis dolor, eum expedita facilis fuga libero non numquam perferendis perspiciatis tempora totam! Accusamus ad asperiores aut autem consectetur consequatur, consequuntur culpa cupiditate deserunt dignissimos distinctio dolore ea et eveniet exercitationem facere id illo itaque magni modi odio officiis pariatur perspiciatis possimus praesentium quae qui tenetur vel velit voluptatibus! Accusantium aliquam aliquid corporis debitis deserunt, earum eius incidunt labore magnam nemo non officiis, quas quis reiciendis sapiente sint suscipit tempora, vel veritatis voluptate. Amet aspernatur ducimus eius, excepturi explicabo nesciunt non officiis omnis quos totam ullam?</p>
 -->
-    </article>
-    <nav class="button-bar">
-        <ul class="tab">
-            <li id="prev_button">上一章</li>
-            <li id="next_button">下一章</li>
-        </ul>
-    </nav>
-    <div id="bottom_nav" class="bottom-nav" style="display: none">
-        <ul>
-            <li id="menu"></li>
-            <li>目录</li>
-        </ul>
-        <ul id="font_switch">
-            <li id="font"></li>
-            <li>字体</li>
-        </ul>
-        <ul id="night_day_switch">
-            <li id="moon" ></li>
-            <li id="sun" style="display: none"></li>
-            <li id="day_night">夜间</li>
-        </ul>
-    </div>
-    <div class="nav-panel-bk" style="display: none"></div>
-    <div id="font_container" class="nav-panel" style="display: none" >
-        <div class="child-mod">
-            <span>字号</span>
-            <button id="large_font" class="font-size-button">大</button>
-            <button id="small_font" class="font-size-button">小</button>
+        </article>
+        <nav class="button-bar">
+            <ul class="tab">
+                <li id="prev_button">上一章</li>
+                <li id="next_button">下一章</li>
+            </ul>
+        </nav>
+        <div id="bottom_nav" class="bottom-nav" style="display: none">
+            <ul>
+                <li id="menu"></li>
+                <li>目录</li>
+            </ul>
+            <ul id="font_switch">
+                <li id="font"></li>
+                <li>字体</li>
+            </ul>
+            <ul id="night_day_switch">
+                <li id="moon"></li>
+                <li id="sun" style="display: none"></li>
+                <li id="day_night">夜间</li>
+            </ul>
         </div>
-        <div class="child-mod">
-            <span>背景</span>
-            <div class="bk-container-1" id="bk1">
-                <div id="bk_1"></div>
+        <div class="nav-panel-bk" style="display: none"></div>
+        <div id="font_container" class="nav-panel" style="display: none">
+            <div class="child-mod">
+                <span>字号</span>
+                <button id="large_font" class="font-size-button">大</button>
+                <button id="small_font" class="font-size-button">小</button>
             </div>
-            <div class="bk-container-2" id="bk2">
-                <div id="bk_2"></div>
-            </div>
-            <div class="bk-container-3" id="bk3">
-                <div id="bk_3"></div>
-            </div>
-            <div class="bk-container-4" id="bk4">
-                <div class="bk-container-current" id="bk_4" ></div>
+            <div class="child-mod">
+                <span>背景</span>
+                <div class="bk-container-1" id="bk1">
+                    <div id="bk_1"></div>
+                </div>
+                <div class="bk-container-2" id="bk2">
+                    <div id="bk_2"></div>
+                </div>
+                <div class="bk-container-3" id="bk3">
+                    <div id="bk_3"></div>
+                </div>
+                <div class="bk-container-4" id="bk4">
+                    <div class="bk-container-current" id="bk_4"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<script src="lib/zepto.min.js"></script>
-<script>
-    window.jQuery = $ ; /*zepto的$*/
-</script>
-<script src="js/jquery.base64.js"></script>
-<script src="js/jquery.jsonp.js"></script>
-<script src="js/main.js"></script>
+    <script src="lib/zepto.min.js"></script>
+    <script>
+        window.jQuery = $; /*zepto的$*/
+
+    </script>
+    <script src="js/jquery.base64.js"></script>
+    <script src="js/jquery.jsonp.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
